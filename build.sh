@@ -9,11 +9,17 @@ fi
 
 mkdir build
 
-# copy all php files
+# php files
 cp $dir/*.php $dir/build
 
-# copy all css files
-cp -r $dir/*.css $dir/build
+# includes
+cp -r $dir/includes $dir/build
+
+# style.css
+cp $dir/style.css $dir/build
+
+# styles
+cp -r $dir/styles $dir/build
 
 # js
 cp -r $dir/js $dir/build
