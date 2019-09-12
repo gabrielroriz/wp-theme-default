@@ -2,6 +2,7 @@
 
 require get_template_directory() . '/includes/utils.php';
 require get_template_directory() . '/includes/customizer/customizer.php';
+require get_template_directory() . '/includes/widgets/widget-example.php';
 
 
 function theme_scripts()
