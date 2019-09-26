@@ -27,7 +27,7 @@ cp -r $dir/js $dir/build
 # assets
 cp -r $dir/assets $dir/build
 
-zipname=$(echo $THEME_NAME | tr '[:upper:]' '[:lower:]' | tr ' ' '_');
+zipname=$(echo $THEME_NAME | tr '[:upper:]' '[:lower:]' | tr ' ' '_')_${THEME_VERSION};
 
 cd build; zip -r ./$zipname.zip *
 
