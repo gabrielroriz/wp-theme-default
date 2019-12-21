@@ -1,21 +1,17 @@
 <?php
 
-// function customizer_example($wp_customize){
-    
-//     $wp_customize->add_section('section', array(
-//         'title'             =>      'Section Name',
-//         'description'       =>      'SECTION DESCRIPTION HERE',
-//         'priority'          =>      130 
-//     ));
+require_once(get_template_directory() . '/includes/customizer/utils.php');
 
-//     $wp_customize->add_setting('section__field', array(
-//         'default'           =>          'DEFAULT TEXT CONTENT HERE',
-//         'type'              =>          'theme_mod'
-//     ));
+function customizer_example($wp_customize){
 
-//     $wp_customize->add_control('section__field', array(
-//         'label'             =>          "LABEL HERE",
-//         'section'           =>          "section",
-//         'priority'          =>          1
-//     ));
-// }
+    // section
+
+    $section = 'my-section';
+    customizer_section($wp_customize, $section, 'Example Section', "Description of my section example.");
+
+    // fields
+
+    $group_header = 'header';
+    customizer_text_field($wp_customize, $section, $group_header, "title", "Título"); 
+
+}
