@@ -48,3 +48,10 @@ O *customizer* cumpre a função de criar campos customizáveis para o usuário,
     }
     ...
     ```
+
+
+## Utilitários.
+
+Testar nas seguintes resoluções:
+- Notebook: 1920 x 1080 pixels
+- Tablet: 768 x 1024 pixels

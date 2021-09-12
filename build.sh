@@ -31,14 +31,16 @@ cp -r $dir/js $dir/build
 # assets
 cp -r $dir/assets $dir/build
 
-rm -rf $dir/build/assets/images
+rm -rf $dir/build/assets/images #only min-images!
+
+# templates
+cp -r $dir/templates $dir/build
 
 zipname=$(echo $THEME_NAME | tr '[:upper:]' '[:lower:]' | tr ' ' '-')-v${THEME_VERSION};
 
 cd build; 
 
-zip -q ./$zipname.zip * # Without LOG
-# zip -r ./$zipname.zip * #With LOG
+zip -q -r ./$zipname.zip *
 
 echo -e "\x1b[40mBuild done successfully.\x1b[0m"
 
